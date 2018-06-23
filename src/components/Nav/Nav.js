@@ -1,9 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
 const Nav = () => (
   <div className="navbar">
-    <div>
+  <Grid container spacing={12}>
+  <Grid item xs={4}>
+  <h2>Jonathan Kruse</h2>
+  </Grid>
+  <Grid item xs={4}>
+  
+  
+  </Grid>
+  <Grid item xs={4}>
+  <div>
+    
       <ul>
         <li>
           <Link to="/user">
@@ -17,6 +28,10 @@ const Nav = () => (
         </li>
       </ul>
     </div>
+
+  </Grid>
+  </Grid>
+    
   </div>
 );
 

@@ -1,5 +1,5 @@
 /* the only line you likely need to change is
- mongoURI = 'mongodb://localhost:27017/prime_app';
+ mongoURI = 'mongodb://localhost:27017/myApp';
  change `prime_app` to the name of your database, and you should be all set!
 */
 
@@ -15,7 +15,7 @@ if (process.env.MONGODB_URI) {
   mongoURI = process.env.MONGODB_URI;
 } else {
   // use the local database server
-  mongoURI = 'mongodb://localhost:27017/prime_app';
+  mongoURI = 'mongodb://localhost:27017/personal_site';
 }
 
 mongoose.connect(mongoURI);
