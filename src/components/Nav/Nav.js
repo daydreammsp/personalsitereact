@@ -4,15 +4,14 @@ import Grid from '@material-ui/core/Grid';
 
 const Nav = () => (
   <div className="navbar">
-  <Grid container spacing={12}>
+  <Grid container spacing={1}>
   <Grid item xs={4}>
-  <h2>Jonathan Kruse</h2>
+  <div className="headerName">Jonathan Kruse</div>
   </Grid>
-  <Grid item xs={4}>
-  
+  <Grid item xs={6}>
   
   </Grid>
-  <Grid item xs={4}>
+  <Grid item xs={2}>
   <div>
     
       <ul>
