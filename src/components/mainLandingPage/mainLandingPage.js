@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Nav from '../Nav/Nav';
+import Crispystrudel from './crispyStrudel.jpg'
 
 const mapStateToProps = state => ({
     user: state.user,
@@ -18,7 +19,8 @@ const mapStateToProps = state => ({
         return (
           <div>
              <Nav /> 
-            <h1>Hello World</h1>
+      
+            <img className="mainImg" src={Crispystrudel}/>
           </div>
         );
       }

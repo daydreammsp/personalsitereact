@@ -13,10 +13,10 @@ import MobileMenu from '../MobileMenu/MobileMenu';
  
 class Nav extends React.Component {
   render () {
-    if (isWidthUp('md', this.props.width)) {
+    if (isWidthUp('lg', this.props.width)) {
       return (
         <div className="navbar">
-   <Grid container spacing={1}>
+   <Grid container spacing={0}>
   <Grid item xs={4}>
      <div className="headerName">Jonathan Kruse</div>
    </Grid>
