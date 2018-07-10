@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Nav from '../Nav/Nav';
-import Crispystrudel from './crispyStrudel.jpg'
+import Crispystrudel from './crispyStrudel.jpg';
+
+
 
 const mapStateToProps = state => ({
     user: state.user,

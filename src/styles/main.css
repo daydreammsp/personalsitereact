@@ -103,3 +103,6 @@ li a:hover {
     width:100%;
     max-height: 20%;
 }
+.navItems:hover{
+background-color: #dbd5d580
+}
