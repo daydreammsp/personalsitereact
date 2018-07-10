@@ -1,37 +1,122 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
+import compose from 'recompose/compose';
+import { withStyles } from '@material-ui/core/styles';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
-const Nav = () => (
-  <div className="navbar">
-  <Grid container spacing={1}>
+
+
+
+ 
+class Nav extends React.Component {
+  render () {
+    if (isWidthUp('md', this.props.width)) {
+      return (
+        <div className="navbar">
+   <Grid container spacing={1}>
   <Grid item xs={4}>
-  <div className="headerName">Jonathan Kruse</div>
-  </Grid>
+     <div className="headerName">Jonathan Kruse</div>
+   </Grid>
   <Grid item xs={6}>
   
-  </Grid>
-  <Grid item xs={2}>
+   </Grid>
+   <Grid item xs={2}>
   <div>
     
-      <ul>
-        <li>
-          <Link to="/user">
-            User Home
+       <ul>
+         <li>
+           <Link to="/user">
+             User Home
           </Link>
-        </li>
+         </li>
         <li>
-          <Link to="/info">
-            Info Page
-          </Link>
-        </li>
-      </ul>
+           <Link to="/info">
+             Info Page
+           </Link>
+         </li>
+       </ul>
     </div>
 
-  </Grid>
+   </Grid>
   </Grid>
     
-  </div>
-);
+   </div>
+      )
+    }
 
-export default Nav;
+    return (
+      <div className="navbar">
+   <Grid container spacing={1}>
+  <Grid item xs={4}>
+     <div className="headerName">Jonathan Kruse</div>
+   </Grid>
+  <Grid item xs={6}>
+  
+   </Grid>
+   <Grid item xs={2}>
+  <div>
+    <MobileMenu/>
+       {/* <ul>
+         <li>
+           <Link to="/user">
+             User Home
+          </Link>
+         </li>
+        <li>
+           <Link to="/info">
+             Info Page
+           </Link>
+         </li>
+       </ul> */}
+    </div>
+
+   </Grid>
+  </Grid>
+    
+   </div>
+    );
+  }
+}
+
+export default withWidth()(Nav);
+// const Nav = () => (
+//   <div className="navbar">
+//   <Grid container spacing={1}>
+//   <Grid item xs={4}>
+//   <div className="headerName">Jonathan Kruse</div>
+//   </Grid>
+//   <Grid item xs={6}>
+  
+//   </Grid>
+//   <Grid item xs={2}>
+//   <div>
+    
+//       <ul>
+//         <li>
+//           <Link to="/user">
+//             User Home
+//           </Link>
+//         </li>
+//         <li>
+//           <Link to="/info">
+//             Info Page
+//           </Link>
+//         </li>
+//       </ul>
+//     </div>
+
+//   </Grid>
+//   </Grid>
+    
+//   </div>
+// );
+
+
+// export default Nav;
+// export default compose(
+//   withStyles(styles),
+//   withWidth(),
+// )(Nav);
