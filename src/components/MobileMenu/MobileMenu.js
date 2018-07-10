@@ -54,8 +54,8 @@ class MobileMenu extends React.Component {
           ))} */}
           <ul>
          <li>
-           <Link to="/user">
-             User Home
+           <Link to="/mainlandingpage">
+              Home
           </Link>
          </li>
         <li>

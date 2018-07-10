@@ -28,8 +28,8 @@ class Nav extends React.Component {
     
        <ul>
          <li>
-           <Link to="/user">
-             User Home
+           <Link to="/mainlandingpage">
+             Home
           </Link>
          </li>
         <li>
@@ -49,7 +49,7 @@ class Nav extends React.Component {
 
     return (
       <div className="navbar">
-   <Grid container spacing={1}>
+   <Grid container spacing={0}>
   <Grid item xs={4}>
      <div className="headerName">Jonathan Kruse</div>
    </Grid>

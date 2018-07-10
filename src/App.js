@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Header from './components/Header/Header';
-// import LoginPage from './components/LoginPage/LoginPage';
+import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
@@ -24,7 +24,7 @@ const App = () => (
         <Redirect exact from="/" to="/home" />
         <Route
           path="/home"
-          component={MainLandingPage}
+          component={LoginPage}
         />
         <Route
           path="/register"
@@ -37,6 +37,10 @@ const App = () => (
         <Route
           path="/info"
           component={InfoPage}
+        />
+        <Route
+          path="/mainlandingpage"
+          component={MainLandingPage}
         />
         {/* OTHERWISE no path */}
         <Route
