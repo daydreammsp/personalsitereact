@@ -54,9 +54,20 @@ input[type="submit"] {
   border-radius: 0px;
   overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
-    top: 100px; /* Position the navbar at the top of the page */
+    top: 50px; /* Position the navbar at the top of the page */
+    
 }
-
+.navbar1 {
+  
+    width: 100%;
+    border-radius: 0px;
+    overflow: hidden;
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0px; /* Position the navbar at the top of the page */
+      background-color: rgba(75, 72, 72, 0.747);
+      transition: background-color 200ms linear;
+  }
+  
 ul {
     list-style-type: none;
     margin: 0;
@@ -72,7 +83,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: none;
 
 }
@@ -89,7 +100,8 @@ li a:hover {
     color:white;
     font-family: Helvetica;
     font-size: 25px;
-    padding: 14px 16px;
+    text-align: center;
+    padding: 10px 10px;
 }
 
 .navStick{
@@ -104,5 +116,5 @@ li a:hover {
     max-height: 20%;
 }
 .navItems:hover{
-background-color: #dbd5d580
+background-color: #dbd5d52a
 }

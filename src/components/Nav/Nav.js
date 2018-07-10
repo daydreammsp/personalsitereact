@@ -13,12 +13,31 @@ import Instagram from './Instagram.png';
 
 
 
- 
+
 class Nav extends React.Component {
+  state ={
+    isTop: true,
+  }
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 150;
+      if (isTop !== this.state.isTop) {
+          this.setState({ isTop })
+      }
+    });
+  }
   render () {
+    let backgroundvar = 'navbar'
+    if (!this.state.isTop){
+      backgroundvar = 'navbar1'
+    }
+   
     if (isWidthUp('lg', this.props.width)) {
+      
       return (
-        <div className="navbar">
+        
+        <div className={backgroundvar}>
+        
    <Grid container spacing={0}>
   <Grid item xs={4}>
      <div className="headerName">Jonathan Kruse</div>
@@ -48,11 +67,11 @@ class Nav extends React.Component {
 
    </Grid>
   </Grid>
-    
-   </div>
+  </div>
+  //  </div>
       )
     }
-
+  
     return (
       <div className="navbar">
    <Grid container spacing={0}>
@@ -65,18 +84,7 @@ class Nav extends React.Component {
    <Grid item xs={2}>
   <div>
     <MobileMenu/>
-       {/* <ul>
-         <li>
-           <Link to="/user">
-             User Home
-          </Link>
-         </li>
-        <li>
-           <Link to="/info">
-             Info Page
-           </Link>
-         </li>
-       </ul> */}
+    
     </div>
 
    </Grid>
@@ -84,45 +92,9 @@ class Nav extends React.Component {
     
    </div>
     );
+  
   }
+
 }
 
 export default withWidth()(Nav);
-// const Nav = () => (
-//   <div className="navbar">
-//   <Grid container spacing={1}>
-//   <Grid item xs={4}>
-//   <div className="headerName">Jonathan Kruse</div>
-//   </Grid>
-//   <Grid item xs={6}>
-  
-//   </Grid>
-//   <Grid item xs={2}>
-//   <div>
-    
-//       <ul>
-//         <li>
-//           <Link to="/user">
-//             User Home
-//           </Link>
-//         </li>
-//         <li>
-//           <Link to="/info">
-//             Info Page
-//           </Link>
-//         </li>
-//       </ul>
-//     </div>
-
-//   </Grid>
-//   </Grid>
-    
-//   </div>
-// );
-
-
-// export default Nav;
-// export default compose(
-//   withStyles(styles),
-//   withWidth(),
-// )(Nav);
